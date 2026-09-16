@@ -7,26 +7,15 @@
   function styleHeaderNav(){
     var links = document.querySelectorAll('nav.primary a');
     links.forEach(function(link){
-      var isAbout = link.getAttribute('href') === 'about.html';
-
-      if(isAbout){
-        link.style.display = 'inline-flex';
-        link.style.alignItems = 'center';
-        link.style.justifyContent = 'center';
-        link.style.background = '#2A2A2A';
-        link.style.border = '1px solid rgba(255,255,255,0.16)';
-        link.style.color = '#F2F2F2';
-        link.style.padding = '10px 16px';
-        link.style.fontWeight = '600';
-        link.style.textDecoration = 'none';
-      } else {
-        link.style.background = 'transparent';
-        link.style.border = 'none';
-        link.style.color = '';
-        link.style.padding = '';
-        link.style.fontWeight = '';
-        link.style.textDecoration = 'none';
-      }
+      link.style.display = 'inline-flex';
+      link.style.alignItems = 'center';
+      link.style.justifyContent = 'center';
+      link.style.background = '#2A2A2A';
+      link.style.border = '1px solid rgba(255,255,255,0.16)';
+      link.style.color = '#F2F2F2';
+      link.style.padding = '10px 16px';
+      link.style.fontWeight = '600';
+      link.style.textDecoration = 'none';
     });
   }
 
