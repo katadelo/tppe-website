@@ -7,6 +7,14 @@
   function styleHeaderNav(){
     var links = document.querySelectorAll('nav.primary a');
     links.forEach(function(link){
+      var href = link.getAttribute('href');
+      var isDesktop = window.innerWidth > 900;
+
+      if(isDesktop && href === '#top'){
+        link.style.display = 'none';
+        return;
+      }
+
       link.style.display = 'inline-flex';
       link.style.alignItems = 'center';
       link.style.justifyContent = 'center';
@@ -68,6 +76,7 @@
   }
 
   styleHeaderNav();
+  window.addEventListener('resize', styleHeaderNav);
   setupContactForm();
 
   if(document.readyState === 'complete'){
