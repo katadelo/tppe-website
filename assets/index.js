@@ -4,6 +4,21 @@
   var target = 92;
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  function styleHeaderNav(){
+    var links = document.querySelectorAll('nav.primary a');
+    links.forEach(function(link){
+      link.style.display = 'inline-flex';
+      link.style.alignItems = 'center';
+      link.style.justifyContent = 'center';
+      link.style.background = '#2A2A2A';
+      link.style.border = '1px solid rgba(255,255,255,0.16)';
+      link.style.color = '#F2F2F2';
+      link.style.padding = '10px 16px';
+      link.style.fontWeight = '600';
+      link.style.textDecoration = 'none';
+    });
+  }
+
   function run(){
     if(!fill || !num) return;
     if(reduced){
@@ -52,6 +67,7 @@
     });
   }
 
+  styleHeaderNav();
   setupContactForm();
 
   if(document.readyState === 'complete'){
